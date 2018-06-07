@@ -59,7 +59,7 @@ To build a GUI wallet for **All platforms (Ignore if you just want to build a CL
 
 To check all dependencies and install missing ones on **Debian/Ubuntu/Mint/etc**:
 
-    apt install build-essential libssl-dev libevent-dev libseccomp-dev libcap-dev pkg-config autoconf libtool
+    apt install build-essential libssl-dev libevent-dev libseccomp-dev libcap-dev pkg-config autoconf libtool qt5-default
 
 To check all dependencies and install missing ones on **Arch Linux**:
 
@@ -94,7 +94,7 @@ To fetch the source code and build the wallet run the following commands:
     cd spectre
     ./install_boost_1_67  # only necessary on Debian/Ubuntu/Mint/etc. If you have installed Boost 1_67 before, you may ignore this command for now
     ./autogen.sh
-    ./configure --enable-gui --with-qt5=/path/to/qt/version/compiler  # leave out --enable-gui to build only the console wallet
+    ./configure --enable-gui  # leave out --enable-gui to build only the console wallet
     make -j2  # use a higher number if you have many cores and memory, leave -j2 out if you are on a very low-powered system like Raspberry Pi
 
 The resulting binaries will be in the `src` directory and called `spectre` for the GUI wallet and `spectrecoind` for the console wallet.
